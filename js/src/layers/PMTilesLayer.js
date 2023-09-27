@@ -22,6 +22,7 @@ export class LeafletPMTilesLayerView extends layer.LeafletLayerView {
       var options = {
         ...this.get_options(),
         url: this.model.get('url'),
+        ...protomapsL.json_style(this.model.get('style')),
       };
       this.obj = protomapsL.leafletLayer(options);
       }
